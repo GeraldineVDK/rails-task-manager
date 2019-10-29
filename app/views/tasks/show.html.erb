@@ -1,0 +1,13 @@
+
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<% if @task.completed == false %>
+    <%= icon("far", "circle") %> <%= "This task is not completed" %>
+  <% else %>
+    <%= icon("far", "check-circle") %> <%= "This task is completed" %>
+  <% end %>
+
+<%= link_to "Edit task", edit_path %>
+<%= link_to "Back to list", tasks_path %>
+
+
